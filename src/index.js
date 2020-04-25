@@ -1,4 +1,5 @@
 'use strict';
+'use strict';
 
 import './css/styles.css';
 

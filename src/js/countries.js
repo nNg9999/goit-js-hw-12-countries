@@ -36,7 +36,7 @@ refs.userInput.addEventListener('input', debounce(searchFormHandler, 500));
 function searchFormHandler(e) {
   clearListItems();
   const searchQuery = refs.userInput.value || '';
-  console.log(searchQuery);
+
   if (searchQuery) {
     fetchCountries(searchQuery);
   }
@@ -46,13 +46,12 @@ function fetchCountries(searchQuery) {
   newfetchCountries
     .fetchCountries(searchQuery)
     .then(data => {
-      rendertListItems(data);
-      // toastr.success('SUCCESS!');
+      renderListItems(data);
     })
     .catch(toastr.error('ERROR!'));
 }
 
-function rendertListItems(items) {
+function renderListItems(items) {
   let markup = '';
   if (items.length === 1) {
     markup = countriesListItemsTemplate(items);

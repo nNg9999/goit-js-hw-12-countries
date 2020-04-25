@@ -25,6 +25,11 @@ h2 {
   text-align: center;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Country List */
 .country-list {
   display: grid;
@@ -44,8 +49,8 @@ h2 {
 
 .image {
   position: absolute;
-  right: 20%;
-  top: 30%;
+  right: 15%;
+  top: 25%;
 }
 
 /*Search-form*/
